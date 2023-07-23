@@ -1,0 +1,26 @@
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div [ngClass]="{mySlides: currentSlide !== 1}" >
+      <div class="numbertext" >1 / 3</div>
+      <img src="assets\slider\pexels-photo.jpeg" style="width:100%">
+      <div class="text">Furfill your work outs</div>
+    </div>
+
+    <div div [ngClass]="{mySlides: currentSlide !== 2 }">
+        <div class="numbertext">2 / 3</div>
+        <img src="assets\slider\running.jpg" style="width:100%">
+        <div class="text">Caption Two</div>
+    </div>
+
+  
+   <a (click)="minusSlide()" class="prev">&#10094;</a>
+   <a (click)="plusSlide()" class="next">&#10095;</a>
+<br>
+</div>
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+</div>
