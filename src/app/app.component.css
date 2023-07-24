@@ -6,4 +6,24 @@
 .image {
     width: 100px;
     height: 50px;
+    float: left;
+}
+
+.lowerFrame {
+    background-color: rgb(117, 114, 114);
+    padding-top: 1%;
+}
+
+.text {
+    color: whitesmoke;
+    text-indent: 10px;
+    padding-left: 1%;
+}
+
+.subTitle {
+    padding-top: 2%;
+}
+
+.image-text{
+    font-size: large;
 }
