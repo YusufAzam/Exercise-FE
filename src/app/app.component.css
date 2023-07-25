@@ -11,7 +11,14 @@
 
 .lowerFrame {
     background-color: rgb(117, 114, 114);
-    padding-top: 1%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.lowerBanner {
+    background-color: rgb(7, 6, 6);
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 .text {
@@ -26,4 +33,13 @@
 
 .image-text{
     font-size: large;
+}
+
+.arrowDown{
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 20px solid rgb(7, 6, 6);;
 }
