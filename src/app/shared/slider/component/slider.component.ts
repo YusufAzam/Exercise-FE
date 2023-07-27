@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnDestroy,OnInit } from '@angular/core';
 import { Observable, Subscription, interval } from 'rxjs';
 
 @Component({
@@ -6,17 +6,22 @@ import { Observable, Subscription, interval } from 'rxjs';
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.css'],
 })
-export class SliderComponent implements OnInit {
+export class SliderComponent implements OnInit, OnDestroy {
 
   currentSlide: number
   subscription !: Subscription;
   source: Observable<number>
   direction: boolean;
+  
+  hello = 'abc';
 
   constructor(){ 
    this.currentSlide = 1;
    this.source = interval(4000);
    this.direction = true;
+  }
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
  
   ngOnInit(): void {
@@ -28,9 +33,7 @@ export class SliderComponent implements OnInit {
     this.subscription = this.source.subscribe(value => this.autoSlide());
   }
   
-  public plusSlide(){
-    console.log(this.currentSlide)
-    
+  public plusSlide(){    
     if(this.currentSlide !== 3){
       this.currentSlide ++;
       this.resetTimer();
